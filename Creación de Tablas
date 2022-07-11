@@ -1,0 +1,70 @@
+drop schema contrasuli;
+drop user admin_contrasuli;
+
+/*Se crea la base de datos */
+CREATE SCHEMA `contrasuli` ;
+/*Se crea un usuario para la base de datos llamado "admin_contrasuli" y tiene la contraseña "admin_C."*/
+create user 'admin_contrasuli'@'%' identified by 'admin_C.';
+/*Se asignan los prvilegios sobr ela base de datos TechShop al usuario creado */
+grant all privileges on contrasuli.* to 'admin_contrasuli'@'%';
+flush privileges;
+/*
+k = semana
+d = fin de semana
+Se crea la tabla de horario semanal que sale de San José*/
+CREATE TABLE `contrasuli`.`sanjose_puriscal_k` (
+  `id_spWk145` INT NOT NULL AUTO_INCREMENT,
+	`hora` VARCHAR (15) NOT NULL,
+    `servicio` VARCHAR (15) NOT NULL,
+  PRIMARY KEY (`id_spWk145`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_eo_0900_ai_ci;
+  
+  /*Se crea la tabla de horario de fin de semana que sale de San José*/
+CREATE TABLE `contrasuli`.`sanjose_puriscal_d` (
+	`id_spWd145` INT NOT NULL AUTO_INCREMENT,
+     `hora` VARCHAR (15) NOT NULL,
+     `servicio` VARCHAR (15) NOT NULL,
+    PRIMARY KEY (`id_spWd145`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_eo_0900_ai_ci;
+
+/*Se crea la tabla de horario semanal que sale de Puriscal*/
+CREATE TABLE `contrasuli`.`puriscal_sanjose_k` (
+  `id_psWk145` INT NOT NULL AUTO_INCREMENT,
+	`hora` VARCHAR (15) NOT NULL,
+    `servicio` VARCHAR (15) NOT NULL,
+  PRIMARY KEY (`id_psWk145`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_eo_0900_ai_ci;
+  
+  /*Se crea la tabla de horario de fin de semana que sale de Puriscal*/
+CREATE TABLE `contrasuli`.`puriscal_sanjose_d` (
+	`id_psWd145` INT NOT NULL AUTO_INCREMENT,
+     `hora` VARCHAR (15) NOT NULL,
+     `servicio` VARCHAR (15) NOT NULL,
+    PRIMARY KEY (`id_psWd145`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_eo_0900_ai_ci;
+
+
+/*Insertarmos 3 pruebas en la tabla San Jose a Puriscal entre semana*/
+INSERT INTO `contrasuli`.`sanjose_puriscal_k` (`id_spWk145`,`hora`, `servicio`) VALUES ("1","80:50am", "Colectivo");
+INSERT INTO `contrasuli`.`sanjose_puriscal_k` (`id_spWk145`,`hora`, `servicio`) VALUES ("2","90:50am", "Rapido");
+INSERT INTO `contrasuli`.`sanjose_puriscal_k` (`id_spWk145`,`hora`, `servicio`) VALUES ("3","10:50am", "Colectivo");
+/*Insertarmos 3 pruebas en la tabla San Jose a Puriscal entre fin de semana*/
+INSERT INTO `contrasuli`.`sanjose_puriscal_d` (`id_spWd145`,`hora`, `servicio`) VALUES ("1","11:50am", "Colectivo");
+INSERT INTO `contrasuli`.`sanjose_puriscal_d` (`id_spWd145`,`hora`, `servicio`) VALUES ("2","12:50pm", "Colectivo");
+INSERT INTO `contrasuli`.`sanjose_puriscal_d` (`id_spWd145`,`hora`, `servicio`) VALUES ("3","1:50pm", "Colectivo");
+/*Insertarmos 3 pruebas en la tabla Puriscal a San Jose entre semana*/
+INSERT INTO `contrasuli`.`puriscal_sanjose_k` (`id_psWk145`,`hora`, `servicio`) VALUES ("1","5:50am", "Rapido");
+INSERT INTO `contrasuli`.`puriscal_sanjose_k` (`id_psWk145`,`hora`, `servicio`) VALUES ("2","6:50am", "Colectivo");
+INSERT INTO `contrasuli`.`puriscal_sanjose_k` (`id_psWk145`,`hora`, `servicio`) VALUES ("3","7:50am", "Rapido");
+/*Insertarmos 3 pruebas en la tabla Puriscal a San Jose entre fin de semana*/
+INSERT INTO `contrasuli`.`puriscal_sanjose_d` (`id_psWd145`,`hora`, `servicio`) VALUES ("1","2:50pm", "Colectivo");
+INSERT INTO `contrasuli`.`puriscal_sanjose_d` (`id_psWd145`,`hora`, `servicio`) VALUES ("2","3:50pm", "Colectivo");
+INSERT INTO `contrasuli`.`puriscal_sanjose_d` (`id_psWd145`,`hora`, `servicio`) VALUES ("3","1:50pm", "Rapido");
