@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Contrasuli</title>
+        <meta charset="UTF-8"/>
+        <link href="css/estilos_2.css" rel="stylesheet" type="text/css"/>
+        <link href="css/menu_1.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header th:fragmento="header">
+            <h1><FONT SIZE=17 COLOR="#FF6000">C</FONT><FONT COLOR="white" SIZE=10>ontrasuli</FONT></h1>
+            
+       </header>
+
+        <a href="plantilla.html"></a>
+        <nav th:fragmento="nav">
+            
+            <ul class="nav-menu">
+               
+                
+            <li class="nav-menu-item">  <a class="nav-menu-link nav-link" href="/index.html"> <FONT SIZE=5>Inicio</FONT></a></li>    
+                
+            <li class="nav-menu-item">  <a class="nav-menu-link nav-link" th:href="@{/horarios/horarios}"> <FONT SIZE=5>Horarios</FONT></a></li>
+                
+            
+            <li class="nav-menu-item">  <a class="nav-menu-link nav-link" th:href="@{/horarios/horarios}"> <FONT SIZE=5>Rutas</FONT></a></li>
+               
+
+            <li class="nav-menu-item">  <a class="nav-menu-link nav-link" th:href="@{/horarios/horarios}"> <FONT SIZE=5>Empresa</FONT></a></li>
+           
+
+
+            <li class="nav-menu-item">  <a class="nav-menu-link nav-link" th:href="@{/horarios/horarios}"> <FONT SIZE=5>Contacto</FONT></a></li>
+        </ul>
+        </nav>
+
+        
+        <footer>
+            <h2>Contrasuli®  Derechos Reservados 2022&COPY</h2>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Contrasuli</title>
+        <meta charset="UTF-8">
+        
+        <link href="css/estilos_2.css" rel="stylesheet" type="text/css"/>
+        <link href="css/menu_1.css" rel="stylesheet" type="text/css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <header class="logo nav-link" th:replace="layout/plantilla :: header"/>
+
+        <nav th:replace="layout/plantilla :: nav"/>
+
+        <div class="row">
+            <aside>
+                <h2> Buses Puriscal</h2>
+                <p>La empresa de buses de Puriscal a San Jose maneja un control en linea de las ventas de sus servicos .</p>
+            </aside>
+            <section>
+                <h2>Section</h2>
+
+                <article>
+                <figure >
+                    
+                    
+                    
+                    <img src="images/Foto-1-1170x684.jpg" alt="imagen buses" width="800" height="500" border="2"/>
+                   
+                    
+                </figure>
+                 </article>  
+            </section>
+        </div>    
+
+
+        <footer>
+            <a2 th:replace="layout/plantilla :: footer"/></a2>
+        </footer>
+        
+
+    </body>
+</html>
