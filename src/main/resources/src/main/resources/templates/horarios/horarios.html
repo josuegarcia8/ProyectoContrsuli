@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Contrasuli</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/css/estilos_2.css" rel="stylesheet" type="text/css"/>
+        <link href="/css/menu_1.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+
+        <header class="logo nav-link" th:replace="layout/plantilla :: header"/></header>
+
+    <nav th:replace="layout/plantilla :: nav"/> </nav>
+
+
+
+
+<section>
+
+    <div class="contenido">
+        
+
+    </div> 
+    <ul>
+        <li><a th:href="@{/sanjosePuriscalD/listado}" class="a">Ver Horarios de San Jose a Puriscal los fines de semana y feriados</a></li>
+        
+      
+        <li><a th:href="@{/sanjosePuriscalK/listado}" class="a">Ver Horarios de San Jose a Puriscal entre Semana</a></li>
+    </ul>
+     
+    
+
+
+
+
+
+
+
+</section>
+
+
+<footer>
+    <a2 th:replace="layout/plantilla :: footer"/></a2>
+</footer>
+</body>
+</html>

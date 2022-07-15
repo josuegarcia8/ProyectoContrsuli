@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <title>Contrasuli</title>
+    <meta charset="UTF-8">
+    <link href="/css/estilos_2.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/menu_1.css" rel="stylesheet" type="text/css"/>
+
+     <header class="logo nav-link" th:replace="layout/plantilla :: header"/></header>
+      <nav th:replace="layout/plantilla :: nav"/> </nav>
+
+    <div class="contenido">
+        <h2>Horarios</h2>
+        <table class="th">
+            <tr>
+                <td><a th:href="@{/sanjosePuriscalK/nuevo}" class="a">Nuevo horarios</a></td>
+                <!-- <td><a th:href="@{/sanjosePuriscalK/modificar}" class="a">Editar horarios</a></td> -->
+            </tr>
+        </table>
+            <br/>
+            <br/>
+        <div th:if="${sanjosePuriscalDes != null and !sanjosePuriscalDes.empty}">
+            <table border="1" class="tb">
+                <tr>
+                    <th>Hora</th>
+                    <th>Servicio</th>
+                </tr>
+                <tr th:each="sanjosePuriscalD : ${sanjosePuriscalDes}">
+                    <td th:text="${sanjosePuriscalD.hora}"></td>
+                    <td th:text="${sanjosePuriscalD.servicio}"></td>
+                </tr>
+            </table>
+
+
+            <div th:if="${(sanjosePuriscalDes == null or sanjosePuriscalDes.empty) or (sanjosePuriscalDes == null or sanjosePuriscalDes.empty)}">
+                No tenemos sanjosePuriscalDes que mostrar...
+            </div>
+        </div>
+        <footer>
+        <a2 th:replace="layout/plantilla :: footer"/></a2>
+        </footer>
+
+</html>
