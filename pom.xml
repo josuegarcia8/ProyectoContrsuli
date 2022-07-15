@@ -5,16 +5,16 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.0</version>
+        <version>2.7.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.contrasuli</groupId>
     <artifactId>contrasuli</artifactId>
-    <version>1</version>
+    <version>0.0.1-SNAPSHOT</version>
     <name>contrasuli</name>
     <description>Proyecto para desarrollo web y patrones</description>
     <properties>
-        <java.version>18</java.version>
+        <java.version>17</java.version>
     </properties>
     <dependencies>
         <dependency>

@@ -8,3 +8,5 @@ Naranja #FF6000,
 Gris #808080,
 Blanco white,
 Negro Black.
+ azul oscuro: rgba(9,9,121,1) 
+celeste: rgba(0,212,255,1)
